@@ -5,7 +5,7 @@ with src_hosts as (
 
 select 
     host_id
-    , COALESCE(host_name, 'Anonymous') AS host_name
+    , NVL(host_name, 'Anonymous') AS host_name
     , is_superhost
     , created_at
     , updated_at
